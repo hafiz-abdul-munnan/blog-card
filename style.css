@@ -1,0 +1,118 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* font-family: var(--fontRagular); */
+}
+@font-face {
+  font-family: Font Regular;
+  src: url("./assets/fonts/Figtree-Ragular.ttf");
+}
+@font-face {
+  font-family: Font SemiBold;
+  src: url("./assets/fonts/Figtree-SemiBold.ttf");
+}
+@font-face {
+  font-family: Font ExtraBold;
+  src: url("./assets/fonts/Figtree-ExtraBold.ttf");
+}
+:root {
+  --primary: #f4d04e;
+  --white: #ffffff;
+  --black: #000000;
+  --text: #7f7f7f;
+}
+
+body {
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 0 20px;
+}
+
+#container {
+  width: 384px;
+  height:522px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 20px;
+  padding: 24px;
+  gap: 24px;
+  background: var(--white);
+  border: 1px solid var(--black);
+  box-shadow: 8px 8px 0 var(--black);
+  transition: 0.5s all ease-in-out;
+}
+#container:hover{
+  box-shadow: 16px 16px 0 var(--black);
+}
+#container > img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.5s all ease-in-out;
+  cursor: pointer;
+}
+#container >img:hover{
+    box-shadow: 0px 0px 15px #00000038;
+}
+
+.blog_content_body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.blog_content_body span {
+  width: fit-content;
+  font: 0.875rem Font ExtraBold;
+  background: var(--primary);
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+.blog_content_body h6 {
+  font: 0.875rem Font Regular;
+  font-weight: 500;
+}
+.blog_content_body h1 {
+  font: 1.5rem Font ExtraBold;
+  font-weight: 600;
+  transition: 0.5s all ease-in-out;
+  cursor: pointer;
+}
+.blog_content_body h1:hover {
+    color: var(--primary);
+}
+.blog_content_body p {
+  font: 1rem Font Regular;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.author_info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.author_info img{
+    width: 32px;
+}
+.author_info h5{
+    font: 0.875rem Font ExtraBold;
+}
+@media(max-width:600px){
+    #container{
+        width: 327px;
+        height: 501px;
+    }
+    .blog_content_body span, .blog_content_body h6{
+        font-size: 0.75rem;
+    }
+    .blog_content_body h1{
+        font-size: 1.25rem;
+    }
+    .blog_content_body p{font-size: 0.875rem;}
+}
