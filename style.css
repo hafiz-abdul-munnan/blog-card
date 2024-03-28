@@ -64,7 +64,7 @@ body {
 .blog_content_body {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 18px;
 }
 .blog_content_body span {
   width: fit-content;
